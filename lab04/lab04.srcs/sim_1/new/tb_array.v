@@ -31,7 +31,7 @@ module tb_array(
     
     integer i;
     initial begin
-        for(i=0;i<32;i=i+1) begin
+        for(i=0;i<20;i=i+1) begin
             ain0 = $urandom;
             ain1 = $urandom;
             ain2 = $urandom;
@@ -42,9 +42,10 @@ module tb_array(
             bin2 = $urandom;
             bin3 = $urandom;
             
-            cmd = $urandom % 5;
+            cmd = i / 4;
             #20;
         end
+        $finish;
     end
     
     adder_array UUT3(
