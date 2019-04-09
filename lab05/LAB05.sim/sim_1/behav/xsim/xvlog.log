@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/csehome/dhsodhao52/LAB05/LAB05.srcs/sources_1/new/my_pe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module my_pe
+INFO: [VRFC 10-2263] Analyzing Verilog file "/csehome/dhsodhao52/LAB05/LAB05.srcs/sources_1/new/my_bram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module my_bram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/csehome/dhsodhao52/LAB05/LAB05.srcs/sim_1/new/my_bram_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module my_bram_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/csehome/dhsodhao52/LAB05/LAB05.srcs/sim_1/new/my_pe_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module my_pe_tb
