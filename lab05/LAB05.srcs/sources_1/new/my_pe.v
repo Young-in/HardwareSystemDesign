@@ -52,8 +52,8 @@ module my_pe #(
         if(~aresetn) Psum = 0;
     end
     
-    always @(posedge dvalid) begin
-        #2 Psum = buffer;
+    always @(buffer) begin
+        Psum = buffer;
     end
 
     floating_MAC mac(
