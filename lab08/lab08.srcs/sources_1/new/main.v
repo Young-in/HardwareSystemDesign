@@ -1,24 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 2019/04/30 19:10:37
-// Design Name: 
-// Module Name: main
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 
 module main(
     input gclk,
@@ -44,6 +24,5 @@ module main(
             counter <= counter - 1;
         end 
     end
-    wire aclk;
     
 endmodule

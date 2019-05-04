@@ -60,13 +60,11 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
   reset_param project.defaultXPMLibraries 
   open_checkpoint C:/Users/dhsodhao52/Documents/GitHub/HardwareSystemDesign/lab08/lab08.runs/impl_1/main.dcp
   set_property webtalk.parent_dir C:/Users/dhsodhao52/Documents/GitHub/HardwareSystemDesign/lab08/lab08.cache/wt [current_project]
