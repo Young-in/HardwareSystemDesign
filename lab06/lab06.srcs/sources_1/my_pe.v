@@ -42,7 +42,7 @@ module my_pe #(
     reg [31:0] Psum;
     wire [31:0] buffer;
     
-    assign dout = (dvalid == 1) ? Psum : 32'b0;
+    assign dout = (dvalid == 1) ? buffer : 32'b0;
     
     always @(posedge aclk) begin
         if(we == 1) peram[addr] = din;
