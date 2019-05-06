@@ -1,4 +1,2 @@
 Vivado Simulator 2018.3
 Time resolution is 1 ps
-WARNING: File ain.txt referenced on C:/Users/dhsodhao52/Documents/GitHub/HardwareSystemDesign/lab05/LAB05.srcs/sim_1/new/my_pe_tb.v at line 56 cannot be opened for reading. Please ensure that this file is available in the current working directory.
-$finish called at time : 2890 ns : File "C:/Users/dhsodhao52/Documents/GitHub/HardwareSystemDesign/lab05/LAB05.srcs/sim_1/new/my_pe_tb.v" Line 69

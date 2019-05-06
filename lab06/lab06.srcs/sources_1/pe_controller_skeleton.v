@@ -134,8 +134,8 @@ module pe_con#(
     
    //part3: update output and internal register
    //S_LOAD: we
-	assign we_local = (state == S_LOAD && rdaddr[L_RAM_SIZE]) ? 'd1 : 'd0;
-	assign we_global = (state == S_LOAD && !rdaddr[L_RAM_SIZE]) ? 'd1 : 'd0;
+	assign we_local = (load_flag && rdaddr[L_RAM_SIZE]) ? 'd1 : 'd0;
+	assign we_global = (load_flag && !rdaddr[L_RAM_SIZE]) ? 'd1 : 'd0;
 	
 	//S_CALC: wrdata 
   always @(posedge aclk)
@@ -170,12 +170,12 @@ module pe_con#(
 	assign ain = valid ? gdout : 'd0;
 
 	//S_LOAD&&CALC
-   assign addr = (state == S_LOAD) ? rdaddr[L_RAM_SIZE-1:0] : (state == S_CALC) ? counter : 'd0;
+   assign addr = (load_flag) ? rdaddr[L_RAM_SIZE-1:0] : (calc_flag) ? counter : 'd0;
 	
 
 	//S_LOAD
 	assign din = we_local  ? rddata  : 'd0;
-   assign rdaddr = (state == S_LOAD) ? counter : 'd0;
+   assign rdaddr = (load_flag) ? counter : 'd0;
 
 	//done signals
    assign load_done = (load_flag) && (counter == 'd0);
