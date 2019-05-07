@@ -46,6 +46,15 @@ module pe_tb(
         #10;
         start <= 1;
         aresetn <= 1;
+        #10;
+        start <= 0;
+        #3190; 
+        aresetn <= 0;
+        #10
+        start <= 1;
+        aresetn <= 1;
+
+        
         
     end
     

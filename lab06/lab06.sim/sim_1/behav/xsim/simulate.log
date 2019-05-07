@@ -1,2 +1,4 @@
 Vivado Simulator 2018.3
 Time resolution is 1 ps
+Warning: WARNING : aresetn must be asserted or deasserted for a minimum of 2 cycles
+Time: 3235 ns  Iteration: 1  Process: /pe_tb/pe/u_pe/mac/U0/i_synth/has_aresetn/check_reset  File: /wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/floating_point_v7_1/hdl/floating_point_v7_1_vh_rfs.vhd
