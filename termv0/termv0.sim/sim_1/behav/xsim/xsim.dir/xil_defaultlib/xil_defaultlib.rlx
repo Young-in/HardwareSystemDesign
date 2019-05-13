@@ -1,0 +1,10 @@
+0.6
+2018.3
+Dec  6 2018
+23:39:36
+/csehome/daddy321/termv0/termv0.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+/csehome/daddy321/termv0/termv0.srcs/sim_1/new/pe_tb.v,1557755397,verilog,,,,pe_tb,,,,,,,,
+/csehome/daddy321/termv0/termv0.srcs/sources_1/ip/floating_MAC/sim/floating_MAC.vhd,1557747651,vhdl,,,,floating_mac,,,,,,,,
+/csehome/daddy321/termv0/termv0.srcs/sources_1/ip/floating_point_0_1/sim/floating_point_0.vhd,1557749830,vhdl,,,,floating_point_0,,,,,,,,
+/csehome/daddy321/termv0/termv0.srcs/sources_1/new/my_pe.v,1557749650,verilog,,/csehome/daddy321/termv0/termv0.srcs/sources_1/new/pe_controller_skeleton.v,,my_pe,,,,,,,,
+/csehome/daddy321/termv0/termv0.srcs/sources_1/new/pe_controller_skeleton.v,1557754486,verilog,,/csehome/daddy321/termv0/termv0.srcs/sim_1/new/pe_tb.v,,pe_con,,,,,,,,
