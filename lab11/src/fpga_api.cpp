@@ -97,26 +97,52 @@ void FPGA::convLowering(const std::vector<std::vector<std::vector<std::vector<fl
                         const std::vector<std::vector<std::vector<float>>> &inputs,
                         std::vector<std::vector<float>> &new_inputs)
 {
-  /*
-   * Arguments:
-   *
-   * conv_weights: [conv_channel, input_channel, conv_height, conv_width]
-   * new_weights: [?, ?]
-   * inputs: [input_channel, input_height, input_width]
-   * new_inputs: [?, ?]
-   *
-   */
+	/*
+	 * Arguments:
+	 *
+	 * conv_weights: [conv_channel, input_channel, conv_height, conv_width]
+	 * new_weights: [?, ?]
+	 * inputs: [input_channel, input_height, input_width]
+	 * new_inputs: [?, ?]
+	 *
+	 */
 
-  int conv_channel = cnn_weights.size();
-  int input_channel = cnn_weights[0].size();
-  int conv_height = cnn_weights[0][0].size();
-  int conv_width = cnn_weights[0][0][0].size();
-  //int input_channel = inputs.size();
-  int input_height = inputs[0].size();
-  int input_width = inputs[0][0].size();
+	int conv_channel = cnn_weights.size();
+	int input_channel = cnn_weights[0].size();
+	int conv_height = cnn_weights[0][0].size();
+	int conv_width = cnn_weights[0][0][0].size();
+	//int input_channel = inputs.size();
+	int input_height = inputs[0].size();
+	int input_width = inputs[0][0].size();
 
-  // IMPLEMENT THIS
-  // For example,
-  // new_weights[0][0] = cnn_weights[0][0][0][0];
-  // new_inputs[0][0] = inputs[0][0][0];
+	// IMPLEMENT THIS
+	// For example,
+	// new_weights[0][0] = cnn_weights[0][0][0][0];
+	// new_inputs[0][0] = inputs[0][0][0];
+  
+	/* Code for new_weights */
+	for(int i = 0; i < conv_channel; i++) {
+		for(int j = 0; j < input_channel; j++) {
+			for(int k = 0; k < conv_height; k++) {
+				for(int l = 0; l < conv_width; l++) {
+					new_weights[i][j * conv_height * conv_width + k * conv_width + l] = cnn_weights[i][j][k][l];
+				}
+			}
+		}
+	}
+	
+	/* Code for new_inputs */
+	int filter_row = input_height - conv_height + 1;
+	int filter_col = input_width - conv_width + 1;
+	for(int i = 0; i < input_channel; i++) {
+		for(int j = conv_height - 1; j >= 0; j--) {
+			for(int k = conv_width - 1; k >= 0; k--) {
+				for(int m = 0; m < filter_row; m++) {
+					for(int n = 0; n < filter_col; n++) {
+						new_inputs[i * conv_height * conv_width + j * conv_width + k][m * filter_col + n] = inputs[i][j + m][k + n];
+					}
+				}
+			}
+		}
+	}
 }
