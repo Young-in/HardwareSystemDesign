@@ -218,7 +218,7 @@ module pe_con#(
 //        );
         
         
-        for(i = 0; i < VECTOR_SIZE; i = i + 1) begin: pe
+        generate for(i = 0; i < VECTOR_SIZE; i = i + 1) begin: pe
             wire [31:0] dout_i;
             my_pe #(
                 .L_RAM_SIZE(L_RAM_SIZE)
@@ -233,6 +233,6 @@ module pe_con#(
                 .dvalid(dvalid_i[i]),
                 .dout(dout_i)
             );
-        end
+        end endgenerate
 
 endmodule
